@@ -1,7 +1,0 @@
-1 - Indicar repositorio en Github y conectar
-
-git remote add origin git@github.com:sebabenzal/<your_repo>
-
-2 - Enviar código al repositorio de Github
-
-git push -u origin main
