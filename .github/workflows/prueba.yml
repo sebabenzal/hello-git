@@ -37,6 +37,7 @@ jobs:
           
   prueba:
     runs-on: ubuntu-latest
+    needs: build # para que los jobs corran en serie
     steps:
       - name: Run a custom message
         run: echo Hola Sebastian!
