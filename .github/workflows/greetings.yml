@@ -16,4 +16,4 @@ jobs:
      steps:
        - run: |
            echo "Hi ${{ github.event.inputs.name }}!"
-           echo "- in ${{ github.event.inputs.country }}!
+           echo "- in ${{ github.event.inputs.country }}!"
