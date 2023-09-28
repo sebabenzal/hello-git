@@ -7,14 +7,27 @@ env:
 
 jobs:
   VariableUsageJob:
-   runs-on: ubuntu-latest
-   env:
-     job_var1: "job variable value"
-   steps:
-     - name: Using Workflow Variables
-       run: echo Hello, $user_name!
-            Welcome to $demo_name!!!
-            here is job var1 $job_var1
-            here is step var1 $step_var1
-       env:
-         step_var1: "Step Variable Value"
+    runs-on: ubuntu-latest
+    env:
+      job_var1: "job variable value"
+    steps:
+      - name: Using Workflow Variables
+        run: echo Hello, $user_name!
+             Welcome to $demo_name!!!
+             here is job var1 $job_var1
+             here is step var1 $step_var1
+        env:
+          step_var1: "Step Variable Value"
+
+      - name: Set user_name Varaible
+        run: echo "::set-env name=user_name::Chandrasekara"
+
+      - name: Set new_var Varaible
+        run: echo "::set-env name=new_var::newvarvalue"
+
+      - name: Using Variables
+        run: echo Hello, $user_name!
+             Welcome to $demo_name!!!
+             here is job var1 $job_var1
+             here is new_var $new_var
+      
