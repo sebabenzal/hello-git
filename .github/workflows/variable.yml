@@ -4,6 +4,7 @@ on: [push]
 env:
   user_name: "Chaminda"
   demo_name: "Variable Demo"
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
 jobs:
   VariableUsageJob:
