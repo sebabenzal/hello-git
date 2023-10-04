@@ -1,6 +1,7 @@
 on: [push]
 jobs:
   FailJobIssueDemo:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Step is going to pass
